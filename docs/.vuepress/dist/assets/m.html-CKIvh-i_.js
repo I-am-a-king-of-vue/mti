@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as c}from"./app-B7WyNI7J.js";const a={};function n(o,r){return c(),t("div")}const l=e(a,[["render",n],["__file","m.html.vue"]]),s=JSON.parse('{"path":"/encyclopedia/m.html","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"encyclopedia/m.md"}');export{l as comp,s as data};
