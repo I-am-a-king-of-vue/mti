@@ -2,6 +2,7 @@ export const redirects = JSON.parse("{}")
 
 export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"前言"} }],
+  ["/politics/", { loader: () => import(/* webpackChunkName: "politics_index.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/politics/index.html.js"), meta: {"title":"前言"} }],
   ["/encyclopedia/", { loader: () => import(/* webpackChunkName: "encyclopedia_index.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/encyclopedia/index.html.js"), meta: {"title":"前言"} }],
   ["/encyclopedia/a.html", { loader: () => import(/* webpackChunkName: "encyclopedia_a.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/encyclopedia/a.html.js"), meta: {"title":""} }],
   ["/encyclopedia/b.html", { loader: () => import(/* webpackChunkName: "encyclopedia_b.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/encyclopedia/b.html.js"), meta: {"title":""} }],
@@ -20,7 +21,6 @@ export const routes = Object.fromEntries([
   ["/encyclopedia/o.html", { loader: () => import(/* webpackChunkName: "encyclopedia_o.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/encyclopedia/o.html.js"), meta: {"title":""} }],
   ["/encyclopedia/p.html", { loader: () => import(/* webpackChunkName: "encyclopedia_p.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/encyclopedia/p.html.js"), meta: {"title":""} }],
   ["/encyclopedia/q.html", { loader: () => import(/* webpackChunkName: "encyclopedia_q.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/encyclopedia/q.html.js"), meta: {"title":""} }],
-  ["/politics/", { loader: () => import(/* webpackChunkName: "politics_index.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/politics/index.html.js"), meta: {"title":"前言"} }],
   ["/japan/", { loader: () => import(/* webpackChunkName: "japan_index.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/japan/index.html.js"), meta: {"title":"前言"} }],
   ["/japan/a.html", { loader: () => import(/* webpackChunkName: "japan_a.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/japan/a.html.js"), meta: {"title":""} }],
   ["/japan/b.html", { loader: () => import(/* webpackChunkName: "japan_b.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/japan/b.html.js"), meta: {"title":""} }],
@@ -30,3 +30,20 @@ export const routes = Object.fromEntries([
   ["/japan/f.html", { loader: () => import(/* webpackChunkName: "japan_f.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/japan/f.html.js"), meta: {"title":""} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/apple/常用/代码/mti/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateRoutes) {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+  }
+  if (__VUE_HMR_RUNTIME__.updateRedirects) {
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ routes, redirects }) => {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
+}

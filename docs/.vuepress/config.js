@@ -33,6 +33,7 @@ export default defineUserConfig({
   description:"专科生0基础跨考翻硕记录学习过程,頑張ります!!",
   theme: defaultTheme({
     logo: '/image/logo.jpg',
+    contributors:false,
     sidebar: [
       {
         text:"前言",
